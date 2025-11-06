@@ -1,0 +1,46 @@
+﻿[
+  {
+    "name": "TeacheJobs Automation",
+    "stack": "Node.js · NestJS · MongoDB · Redis · Docker",
+    "desc": "Education platform uchun real vaqtli qo'ng'iroqlar, vazifa boshqaruvi va analitika servislarini ishlab chiqdim.",
+    "image": "./assets/images/projects/issuetrack.PNG",
+    "year": "2025",
+    "links": {
+      "view": "https://admin.teachejobs.uz",
+      "code": "https://github.com/omonovdev"
+    }
+  },
+  {
+    "name": "FindEdu Platform",
+    "stack": "Node.js · Express · PostgreSQL · Redis",
+    "desc": "Ta'lim markazlarini qidirish va solishtirish uchun REST API hamda ma'lumotlar boshqaruvi xizmatlari yaratildi.",
+    "image": "./assets/images/projects/portfolio1.jpg",
+    "year": "2024",
+    "links": {
+      "view": "https://findedu-client.netlify.app/",
+      "code": "https://github.com/omonovdev/findedu-backend"
+    }
+  },
+  {
+    "name": "Nasiya.uz",
+    "stack": "NestJS · Prisma · PostgreSQL · AWS",
+    "desc": "Yirik savdo tarmoqlari uchun qarzdorlik va naqd oqimlarni kuzatuvchi mikroservis arxitekturali tizim.",
+    "image": "./assets/images/projects/nasiya.jpg",
+    "year": "2024",
+    "links": {
+      "view": "https://count-up-delta.vercel.app/",
+      "code": "https://github.com/omonovdev/nasiya-backend"
+    }
+  },
+  {
+    "name": "Portfolio Website",
+    "stack": "Node.js · Express · EJS · EmailJS",
+    "desc": "Shaxsiy loyihalar va tajribani namoyish qilish uchun server-render portfolio hamda kontakt integratsiyasi.",
+    "image": "./assets/images/projects/portfolio.PNG",
+    "year": "2025",
+    "links": {
+      "view": "https://omonovdev.netlify.app/",
+      "code": "https://github.com/omonovdev/portfolio"
+    }
+  }
+]

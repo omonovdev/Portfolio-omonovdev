@@ -1,0 +1,42 @@
+# GitHub Actions workflow uchun nom berish
+name: Deploy Static Site
+
+# Bu workflow qachon ishga tushishi kerakligini belgilash
+on:
+  # Kod 'push' qilinganda ishga tushadi
+  push:
+    # Faqat 'main' branch'da bo'lganda ishlaydi
+    branches:
+      - main
+
+# Bajariladigan ish (job)
+jobs:
+  deploy:
+    # Ish Ubuntu operatsion tizimida bajariladi
+    runs-on: ubuntu-latest
+
+    # Job ichidagi qadamlar (steps)
+    steps:
+      # Qadamga nom berish
+      - name: Deploy using SSH
+        # appleboy/ssh-action@master nomli GitHub Action'dan foydalanish
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          # Server IP manzili, GitHub Secrets'dan olinadi
+          host: ${{ secrets.HOST }}
+          # Serverga kirish uchun foydalanuvchi nomi
+          username: ${{ secrets.USERNAME }}
+          # SSH kaliti, GitHub Secrets'da saqlangan
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          # SSH porti
+          port: 22
+          # Serverda bajariladigan buyruqlar
+          script: |
+            # Buyruqlardan biri xato bersa, script to'xtaydi
+            set -e
+            # Loyiha papkasiga o'tish
+            cd /var/www/portfolio
+            # GitHub'dagi eng so'nggi kodni tortish
+            git pull origin main
+            # Nginx veb-serverini qayta yuklash, o'zgarishlar kuchga kirishi uchun
+            sudo systemctl reload nginx

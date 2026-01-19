@@ -198,17 +198,15 @@ function initSmoothScroll() {
 function initSectionAnimations() {
     const elements = document.querySelectorAll('.slide-in-left, .slide-in-right, .slide-in-up');
 
+    // Add animate class to start animation
+    elements.forEach(element => {
+        element.classList.add('animate');
+    });
+
     const elementObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                if (entry.target.classList.contains('slide-in-left')) {
-                    entry.target.style.transform = 'translateX(0)';
-                } else if (entry.target.classList.contains('slide-in-right')) {
-                    entry.target.style.transform = 'translateX(0)';
-                } else {
-                    entry.target.style.transform = 'translateY(0)';
-                }
+                entry.target.classList.add('visible');
             }
         });
     }, {

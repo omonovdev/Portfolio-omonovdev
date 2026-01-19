@@ -956,21 +956,51 @@ body::after {
 }
 
 .slide-in-left {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 1.5s ease;
+}
+
+.slide-in-left.animate {
   transform: translateX(-30px);
   opacity: 0;
-  transition: all 1.5s ease;
+}
+
+.slide-in-left.animate.visible {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .slide-in-right {
-  transform: translateX(30px);
-  opacity: 0;
+  transform: translateX(0);
+  opacity: 1;
   transition: all 1.5s ease;
 }
 
+.slide-in-right.animate {
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+.slide-in-right.animate.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 .slide-in-up {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 1.5s ease;
+}
+
+.slide-in-up.animate {
   transform: translateY(30px);
   opacity: 0;
-  transition: all 1.5s ease;
+}
+
+.slide-in-up.animate.visible {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 @media (max-width: 1024px) {

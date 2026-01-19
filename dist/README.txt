@@ -1,0 +1,1 @@
+Vite va Five Server uchun script.js faqat rootda bo'lishi kerak. public/script.js faylini o'chiring, faqat portfolio/script.js ni qoldiring.
